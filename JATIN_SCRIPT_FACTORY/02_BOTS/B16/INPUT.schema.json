@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "bot_id": {
+      "type": "string",
+      "enum": [
+        "B16"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "fact-checked script": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        },
+        "retention rubric": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        }
+      },
+      "required": [
+        "fact-checked script",
+        "retention rubric"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "bot_id",
+    "payload"
+  ]
+}

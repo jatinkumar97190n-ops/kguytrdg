@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "bot_id": {
+      "type": "string",
+      "enum": [
+        "B15"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "matched_script": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        },
+        "claim_ledger": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        },
+        "sources": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        }
+      },
+      "required": [
+        "matched_script",
+        "claim_ledger",
+        "sources"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "bot_id",
+    "payload"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "B01": {
+    "name": "Client Brief & Routing",
+    "inputs": [
+      "raw_request",
+      "client_constraints"
+    ],
+    "outputs": [
+      "approved_brief.json",
+      "route.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; missing audience/format -> REPAIR.",
+    "output_payload_keys": []
+  },
+  "B02": {
+    "name": "Creator Source Ingestion",
+    "inputs": [
+      "creator_urls",
+      "permissions",
+      "source_manifest"
+    ],
+    "outputs": [
+      "normalized_sources.jsonl",
+      "ingestion_report.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; broken URLs/empty transcript -> BLOCKED.",
+    "output_payload_keys": []
+  },
+  "B03": {
+    "name": "Creator DNA / Twin Builder",
+    "inputs": [
+      "normalized_sources",
+      "sampling_rules"
+    ],
+    "outputs": [
+      "creator_dna.json",
+      "evidence_map.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; unsupported trait -> FAIL.",
+    "output_payload_keys": []
+  },
+  "B04": {
+    "name": "Creator Evolution Intelligence",
+    "inputs": [
+      "dated_sources",
+      "creator_dna"
+    ],
+    "outputs": [
+      "style_delta.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; no recent sample -> uncertain, not fabricated.",
+    "output_payload_keys": []
+  },
+  "B05": {
+    "name": "Audience & Niche Intelligence",
+    "inputs": [
+      "approved_brief",
+      "audience_evidence"
+    ],
+    "outputs": [
+      "audience_profile.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; unsupported demographic inference -> flag.",
+    "output_payload_keys": []
+  },
+  "B06": {
+    "name": "Topic & Packaging Intelligence",
+    "inputs": [
+      "brief",
+      "audience_profile",
+      "topic"
+    ],
+    "outputs": [
+      "packaging_contract.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; promise/title mismatch -> REPAIR.",
+    "output_payload_keys": []
+  },
+  "B07": {
+    "name": "Research Planner",
+    "inputs": [
+      "brief",
+      "packaging_contract"
+    ],
+    "outputs": [
+      "research_plan.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; missing evidence questions -> REPAIR.",
+    "output_payload_keys": []
+  },
+  "B08": {
+    "name": "Research Intelligence",
+    "inputs": [
+      "research_plan",
+      "trusted source connectors"
+    ],
+    "outputs": [
+      "research_pack.json",
+      "claim_ledger.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; unsourced claims -> FAIL.",
+    "output_payload_keys": []
+  },
+  "B09": {
+    "name": "Research-to-Creator Translator",
+    "inputs": [
+      "research_pack",
+      "creator_dna"
+    ],
+    "outputs": [
+      "creator_insight_pack.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; invented creator story -> FAIL.",
+    "output_payload_keys": []
+  },
+  "B10": {
+    "name": "Bot B10",
+    "inputs": [],
+    "outputs": [],
+    "tests": "",
+    "output_payload_keys": []
+  },
+  "B11": {
+    "name": "Script Architect",
+    "inputs": [
+      "brief",
+      "research",
+      "packaging",
+      "creator insights"
+    ],
+    "outputs": [
+      "script_architecture.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; missing payoff/section logic -> REPAIR.",
+    "output_payload_keys": []
+  },
+  "B12": {
+    "name": "Script Generator",
+    "inputs": [
+      "approved architecture",
+      "creator_dna"
+    ],
+    "outputs": [
+      "draft_script.md",
+      "draft_meta.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; sections missing -> FAIL.",
+    "output_payload_keys": []
+  },
+  "B13": {
+    "name": "Speakability / Performance",
+    "inputs": [
+      "draft_script",
+      "creator_dna"
+    ],
+    "outputs": [
+      "spoken_script.md",
+      "delivery_notes.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; awkward line -> REPAIR.",
+    "output_payload_keys": []
+  },
+  "B14": {
+    "name": "Creator Match & Revision",
+    "inputs": [
+      "spoken_script",
+      "creator_dna",
+      "evidence"
+    ],
+    "outputs": [
+      "matched_script.md",
+      "match_report.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; signature-copy -> FAIL.",
+    "output_payload_keys": []
+  },
+  "B15": {
+    "name": "Fact & Claim Red-Team",
+    "inputs": [
+      "matched_script",
+      "claim_ledger",
+      "sources"
+    ],
+    "outputs": [
+      "fact_audit.json",
+      "corrected_script.md"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; unsupported certainty -> BLOCK.",
+    "output_payload_keys": []
+  },
+  "B16": {
+    "name": "Elite Script Critic",
+    "inputs": [
+      "fact-checked script",
+      "retention rubric"
+    ],
+    "outputs": [
+      "critique.json",
+      "revision_requests.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; weak opening/pacing -> REPAIR.",
+    "output_payload_keys": []
+  },
+  "B17": {
+    "name": "Client Acceptance / Final QA",
+    "inputs": [
+      "all audits",
+      "final script",
+      "original brief"
+    ],
+    "outputs": [
+      "final_decision.json",
+      "final_script.md"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; hard gate fails -> BLOCK.",
+    "output_payload_keys": []
+  },
+  "B18": {
+    "name": "Feedback & Performance Learning",
+    "inputs": [
+      "approved client edits",
+      "analytics",
+      "dates"
+    ],
+    "outputs": [
+      "learning_delta.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; no analytics -> SKIP, not fake.",
+    "output_payload_keys": []
+  },
+  "B19": {
+    "name": "Creator Story & Knowledge Vault",
+    "inputs": [
+      "verified sources",
+      "creator profile"
+    ],
+    "outputs": [
+      "knowledge_vault.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; unverified personal story -> BLOCK.",
+    "output_payload_keys": []
+  },
+  "B20": {
+    "name": "Hook & Opening Lab",
+    "inputs": [
+      "packaging",
+      "research",
+      "creator_dna"
+    ],
+    "outputs": [
+      "hook_candidates.json",
+      "selected_hook.json"
+    ],
+    "tests": "valid fixture -> schema PASS; missing required field -> clear failure; clickbait promise -> REPAIR.",
+    "output_payload_keys": []
+  }
+}

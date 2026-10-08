@@ -1,0 +1,1 @@
+{"input": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B13", "payload": {"draft_script": "sample_draft_script", "creator_dna": "sample_creator_dna"}}, "output": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B13", "status": "PASS", "payload": {"spoken_script.md": "content_of_spoken_script.md", "delivery_notes.json": "content_of_delivery_notes.json"}}}

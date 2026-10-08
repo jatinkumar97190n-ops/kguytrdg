@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "bot_id": {
+      "type": "string",
+      "enum": [
+        "B18"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "approved client edits": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        },
+        "analytics": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        },
+        "dates": {
+          "type": [
+            "string",
+            "object",
+            "array"
+          ]
+        }
+      },
+      "required": [
+        "approved client edits",
+        "analytics",
+        "dates"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "bot_id",
+    "payload"
+  ]
+}

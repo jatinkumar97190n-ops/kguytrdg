@@ -1,0 +1,1 @@
+{"input": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B04", "payload": {"dated_sources": "sample_dated_sources", "creator_dna": "sample_creator_dna"}}, "output": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B04", "status": "PASS", "payload": {"style_delta.json": "content_of_style_delta.json"}}}

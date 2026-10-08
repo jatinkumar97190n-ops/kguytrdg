@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Valid Execution",
+    "input": {
+      "schema_version": "1.0",
+      "run_id": "test_run",
+      "bot_id": "B16",
+      "payload": {
+        "fact-checked script": "sample_fact-checked script",
+        "retention rubric": "sample_retention rubric"
+      }
+    },
+    "expected_status": "PASS"
+  },
+  {
+    "name": "Missing Required Field",
+    "input": {
+      "schema_version": "1.0",
+      "run_id": "test_run",
+      "bot_id": "B16",
+      "payload": {}
+    },
+    "expected_status": "FAIL"
+  }
+]

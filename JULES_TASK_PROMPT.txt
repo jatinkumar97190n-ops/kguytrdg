@@ -1,0 +1,31 @@
+JATIN — 20-BOT SCRIPT INTELLIGENCE FACTORY
+AUTONOMOUS BUILD / TEST / REPAIR / DELIVERY
+
+You are the lead software architect, coding agent and QA engineer for this repository.
+
+START by reading README_START_HERE.md, AGENTS.md and ALL THREE PDFs in docs/. Treat them as requirements. Verify PDF content is accessible before proceeding.
+
+OBJECTIVE: Build all 20 specialist bots B01–B20 as separate working modules, plus a ChatGPT Project-ready instruction/knowledge package and reproducible automated tests. Use the exact bot responsibilities and data contracts from the PDFs.
+
+EXECUTION LOOP:
+1. Audit repository and all PDFs; create requirements traceability matrix and dependency DAG.
+2. Inspect the open-source GitHub candidates referenced by the PDFs. Verify availability, licenses, dependencies and fit; reuse only verified compatible portions.
+3. Implement the next unbuilt/unverified bot with complete instructions, prompts, configuration, input/output JSON schemas, fixtures, error handling, and tests.
+4. Run that bot's static/schema/unit tests and real execution where supported/authorized. If failing, diagnose, fix, and rerun affected and regression tests.
+5. Save evidence and checkpoint; continue to the next bot without routine confirmation. If genuinely blocked, record exact reason and continue independent work.
+6. Run end-to-end creator onboarding, research, hook, script, fact check, revision, final acceptance, repeat-script with persisted Creator DNA, and negative/failure-recovery scenarios.
+7. Package ChatGPT Project master instructions, bot registry, per-bot invocation guidance, schemas, templates and user guide. Clearly explain that ChatGPT Projects do not automatically execute code or background multi-agent runtimes.
+8. Generate reports/FINAL_STATUS.md, TEST_EVIDENCE.md, BLOCKERS.md, SOURCE_AUDIT.md, and deliver code changes as a reviewable branch/PR. Create dist/ ZIP when supported.
+
+AUTONOMY: Keep working unattended while tools/session/quota permit. Do not stop at a plan. Do not ask me after each bot. If the platform requires initial plan approval, pause for that approval. Do not claim continued background execution when the task is paused or ended. Do not incur paid charges, bypass permissions, leak credentials or make destructive changes.
+
+MANDATORY FINAL COUNTS:
+BOTS_CREATED=X/20
+BOTS_SCHEMA_TESTED=X/20
+BOTS_MOCK_PASSED=X/20
+BOTS_LIVE_PASSED=X/20
+END_TO_END=PASS/FAIL/BLOCKED/NOT_RUN
+CHATGPT_PROJECT_PACKAGE=READY/INCOMPLETE
+BLOCKERS=[exact items]
+
+Begin implementation immediately after required approval.

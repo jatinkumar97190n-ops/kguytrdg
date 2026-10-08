@@ -1,0 +1,1 @@
+{"input": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B18", "payload": {"approved client edits": "sample_approved client edits", "analytics": "sample_analytics", "dates": "sample_dates"}}, "output": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B18", "status": "PASS", "payload": {"learning_delta.json": "content_of_learning_delta.json"}}}

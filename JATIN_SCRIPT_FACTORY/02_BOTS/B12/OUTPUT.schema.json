@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "bot_id": {
+      "type": "string",
+      "enum": [
+        "B12"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "REPAIR",
+        "BLOCK",
+        "FAIL"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "draft_script.md": {
+          "type": "string"
+        },
+        "draft_meta.json": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "draft_script.md",
+        "draft_meta.json"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "bot_id",
+    "status",
+    "payload"
+  ]
+}

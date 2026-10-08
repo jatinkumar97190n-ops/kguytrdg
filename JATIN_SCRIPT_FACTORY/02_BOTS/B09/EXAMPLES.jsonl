@@ -1,0 +1,1 @@
+{"input": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B09", "payload": {"research_pack": "sample_research_pack", "creator_dna": "sample_creator_dna"}}, "output": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B09", "status": "PASS", "payload": {"creator_insight_pack.json": "content_of_creator_insight_pack.json"}}}

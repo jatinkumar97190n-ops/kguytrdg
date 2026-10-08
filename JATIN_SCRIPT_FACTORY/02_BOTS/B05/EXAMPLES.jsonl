@@ -1,0 +1,1 @@
+{"input": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B05", "payload": {"approved_brief": "sample_approved_brief", "audience_evidence": "sample_audience_evidence"}}, "output": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B05", "status": "PASS", "payload": {"audience_profile.json": "content_of_audience_profile.json"}}}

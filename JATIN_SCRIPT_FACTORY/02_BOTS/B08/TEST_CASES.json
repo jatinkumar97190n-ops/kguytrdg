@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Valid Execution",
+    "input": {
+      "schema_version": "1.0",
+      "run_id": "test_run",
+      "bot_id": "B08",
+      "payload": {
+        "research_plan": "sample_research_plan",
+        "trusted source connectors": "sample_trusted source connectors"
+      }
+    },
+    "expected_status": "PASS"
+  },
+  {
+    "name": "Missing Required Field",
+    "input": {
+      "schema_version": "1.0",
+      "run_id": "test_run",
+      "bot_id": "B08",
+      "payload": {}
+    },
+    "expected_status": "FAIL"
+  }
+]

@@ -1,0 +1,1 @@
+{"input": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B01", "payload": {"raw_request": "sample_raw_request", "client_constraints": "sample_client_constraints"}}, "output": {"schema_version": "1.0", "run_id": "test_run", "bot_id": "B01", "status": "PASS", "payload": {"approved_brief.json": "content_of_approved_brief.json", "route.json": "content_of_route.json"}}}

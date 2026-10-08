@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Valid Execution",
+    "input": {
+      "schema_version": "1.0",
+      "run_id": "test_run",
+      "bot_id": "B11",
+      "payload": {
+        "brief": "sample_brief",
+        "research": "sample_research",
+        "packaging": "sample_packaging",
+        "creator insights": "sample_creator insights"
+      }
+    },
+    "expected_status": "PASS"
+  },
+  {
+    "name": "Missing Required Field",
+    "input": {
+      "schema_version": "1.0",
+      "run_id": "test_run",
+      "bot_id": "B11",
+      "payload": {}
+    },
+    "expected_status": "FAIL"
+  }
+]
